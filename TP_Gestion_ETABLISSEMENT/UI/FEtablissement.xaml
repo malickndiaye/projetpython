@@ -1,0 +1,30 @@
+﻿<Window x:Class="TP_Gestion_ETABLISSEMENT.UI.FEtablissement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TP_Gestion_ETABLISSEMENT.UI"
+        mc:Ignorable="d"
+        Title="FEtablissement" Height="397.207" Width="1011.51">
+    <Grid>
+        <Label x:Name="label" Content="Nom de l'établissement" HorizontalAlignment="Left" Margin="69,39,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="nom_txt" HorizontalAlignment="Left" Height="23" Margin="69,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
+        <Label x:Name="label1" Content="Ville de l'établissement" HorizontalAlignment="Left" Margin="69,141,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="ville_txt" HorizontalAlignment="Left" Height="23" Margin="69,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
+        <Label x:Name="label2" Content="Téléphone de l'établissement" HorizontalAlignment="Left" Margin="69,241,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tel_txt" HorizontalAlignment="Left" Height="23" Margin="69,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
+        <Button x:Name="valider" Content="Valider" HorizontalAlignment="Left" Margin="139,337,0,0" VerticalAlignment="Top" Width="75" Click="valider_Click"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="343,39,0,0" VerticalAlignment="Top" Height="272" Width="661" AutoGenerateColumns="False" SelectionChanged="dataGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Id}" Header="ID de l'établissement" />
+                <DataGridTextColumn Binding="{Binding NomE}" Header="Nom de l'établissement" />
+                <DataGridTextColumn Binding="{Binding VilleE}" Header="Ville de l'établissement" />
+                <DataGridTextColumn Binding="{Binding TelE}" Header="Téléphone de l'établissement" />
+                <DataGridTextColumn Binding="{Binding IdU.Id}" Header="ID de l'utilisateur" />
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label x:Name="connexion_params" Content=" " HorizontalAlignment="Left" Margin="624,10,0,0" VerticalAlignment="Top" Width="312"/>
+
+    </Grid>
+</Window>
